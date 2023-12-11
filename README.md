@@ -6,4 +6,8 @@ Solution: The python3 interpreter version from the terminal must be the same as 
 #
 Problem: XLWings is not appearing in Excel ribbon after install.
 
-Solution: Manually install XLWings add-in by double-clicking the .xlam file located in the addin directory within python's folder ("C:\Python310\Lib\site-packages\xlwings\addin" in my local system)
+Solution: Manually install XLWings add-in by double-clicking the .xlam file located in the addin directory within python's folder ("C:\Python310\Lib\site-packages\xlwings\addin" in my local system). Currently, one must do this every time Excel is opened.
+#
+Problem: XLWings disappears from Excel ribbon after Excel is closed and reopened.
+
+Solution: File -> Options -> Add-ins - At the bottom of the window there should be a drop-down menu next to the word "Manage", and "Excel Add-ins" must be checked for this to work. Then click  "Go..." (should be right next to drop-down menu) to open the Add-ins dialog box. Click "Browse" and navigate to the location where the xlwings add-in (.xlam file) is located (within Python installation's Lib\site-packages\xlwings folder). Select the file and click "OK". Then, ensure that the checkbox next to xlwings is checked in the "Add-ins available" list. Click OK to close the Add-ins dialog box. Make sure to save workbook so the XLWings add-in remains in the ribbon. Close book and restart Excel to confirm this worked correctly. 
