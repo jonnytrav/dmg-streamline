@@ -1,13 +1,14 @@
 ### THIS FILE WILL BE USED TO DOCUMENT EDGE CASE UNCOMMON ERRORS AND HOW THEY WERE SOLVED, ALONG WITH CRUCIAL STEPS TO SET UP ENVIRONMENT AND DEPENDENCIES ###
 Python Setup: The Anaconda distribution of Python automatically installs necessary packages like Xlwings and Pandas. https://www.anaconda.com/download will contain links to download the latest LTS version. Documentation for each install can be found at https://docs.anaconda.com/free/anaconda/install/windows/ (for Windows) https://docs.anaconda.com/free/anaconda/install/mac-os/ (for MacOS).
+Doing this correctly should avoid below errors!
 #
-Problem: Import "pandas" could not be resolved from source Pylance.
+Problem: Import "pandas" could not be resolved from source Pylance. This happens in VSCode but not in Jupyter Notebook.
 
 Solution: The python3 interpreter version from the terminal must be the same as our python version selection in VSCode. Type "python3" into terminal and the response should contain the version of python being used. Then, in VSCode, in the bottom right corner of the window (a python file must be open for this to be available), you will seet the version of python being used. Click to open a drop down and select the version that matches the version with which your terminal responded.
 #
 Problem: XLWings is not appearing in Excel ribbon after install.
 
-Solution: Would likely happen fter installing XLWings via the Command Prompt (not recommended, please use the Anaconda distribution of Python for this), you must install the addin via the "xlwings addin install" command now available to you. If it still does not appear in your Excel ribbon, manually launch XLWings add-in by double-clicking the .xlam file located in the "addin" directory within python's installation folder (most likely "C:\PythonXX\Lib\site-packages\xlwings\addin" in your local system).
+Solution: Would likely happen after installing XLWings via the Command Prompt (not recommended, please use the Anaconda distribution of Python for this). You must install the addin via the "xlwings addin install" command now available to you. If it still does not appear in your Excel ribbon, manually launch XLWings add-in by double-clicking the .xlam file located in the "addin" directory within python's installation folder (most likely "C:\PythonXX\Lib\site-packages\xlwings\addin" in your local system).
 #
 Problem: XLWings disappears from Excel ribbon after Excel is closed and reopened.
 
